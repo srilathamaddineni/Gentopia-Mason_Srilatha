@@ -1,5 +1,5 @@
 from typing import AnyStr
-from gentopia.tools.basetool import BaseTool, BaseModel, Field
+from gentopia.tools.basetool import *
 from PyPDF2 import PdfReader
 
 class ReadPdfArgs(BaseModel):
@@ -23,8 +23,7 @@ class ReadPdf(BaseTool):
                 text += page.extract_text()
         return text
 
-    async def _arun(self, *args: Any, **kwargs: Any) -> Any:
-        raise NotImplementedError
+
 
 if __name__ == "__main__":
     pdf_path = 'Srilatha_Maddineni_HW3'

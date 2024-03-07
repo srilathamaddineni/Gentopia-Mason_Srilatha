@@ -22,6 +22,8 @@ class ReadPdf(BaseTool):
                 page = pdf_reader.pages[page_num]
                 text += page.extract_text()
         return text
+    async def _arun(self, *args: Any, **kwargs: Any) -> Any:
+        raise NotImplementedError
 
 
 

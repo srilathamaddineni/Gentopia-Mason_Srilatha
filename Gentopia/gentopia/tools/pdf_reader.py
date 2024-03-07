@@ -8,7 +8,7 @@ class ReadPdfArgs(BaseModel):
 class ReadPdf(BaseTool):
     """Tool that reads text content from a PDF file."""
 
-    name = "read_pdf"
+    name = "pdf_reader"
     description = "A tool to extract text content from a PDF file."
 
     args_schema: Optional[Type[BaseModel]] = ReadPdfArgs
